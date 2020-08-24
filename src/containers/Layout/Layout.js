@@ -93,9 +93,4 @@ const layout = () => {
     );
 }
 
-// orderSummary=<OrderSummary ingredients={this.state.ingredients}
-// purchaseCancelled={this.purchaseCancelHandler}
-// purchaseContinued={this.purchaseContinueHandler}
-// price={this.state.totalPrice}/>
-
 export default layout;
