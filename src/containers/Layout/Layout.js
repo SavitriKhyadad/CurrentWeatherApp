@@ -30,7 +30,7 @@ const layout = () => {
         }
     }
 
-    const purchaseCancelHandler = () => {
+    const closeModal = () => {
         setShowWeather(false);
     }
     const  sideDrawerClosedHandler = () => {
@@ -38,9 +38,6 @@ const layout = () => {
     }
 
     const sideDrawerToggleHandler = () => {
-        // this.setState((prevState) => {
-        //     return {showSideDrawer: !this.state.showSideDrawer};
-        // });
         setShowSideDrawer(!setShowSideDrawer)
     }
 
@@ -69,7 +66,7 @@ const layout = () => {
                 {(typeof weather.main !== "undefined") ? (
                     <div>
                     <div>
-                        <Modal show={showWeather} modalClosed={purchaseCancelHandler}>
+                        <Modal show={showWeather} modalClosed={closeModal}>
                             <div className={classes.display}>
                                 <div>{weather.name}, {weather.sys.country}</div>
                                 <div>{Math.round(weather.main.temp)}°C</div>
