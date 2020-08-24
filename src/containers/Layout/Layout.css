@@ -1,0 +1,157 @@
+.HeroImage{
+    margin-top: 55px;
+    background-color: #555;
+    background: url("../../assets/Images/bg4.jpg") no-repeat center;
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: linear-gradient(to bottom );
+}
+
+.container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.container h1 {
+    letter-spacing: 0.2em;
+    font-size:45px; 
+    margin: 0;
+    text-shadow: 0 0 10px black;
+}
+
+.subtext {
+    margin: 8px;
+    display: block;
+    font-size: 16px;
+    text-shadow: 0 0 10px black;
+}
+.container h1 span {
+    border: 7px solid white;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.searchPart {
+    width: 100%;
+    margin: 15px;
+    font-size: 250px;
+}
+
+.searchPart .searchBar {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    box-shadow: 3px 3px #D0D0D0;
+    border-color: rgb(153, 151, 151);
+    box-sizing: border-box;
+    transition: 0.4s ease;
+
+}
+
+.display {
+    color: white;
+    text-align: center;
+    text-shadow: black;
+    font-weight: 400px;
+    font-size: 25px;
+} 
+
+.searchPart .searchBar :focus {
+    background-color: #C8C8C8;
+}
+.Button {
+    margin: 10px;
+    background-color:white;
+    border: none;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    width: 100px;
+}
+
+
+@media (min-width:700px){
+    .HeroImage{
+        margin-top: 55px;
+         height: 800px;
+    }
+
+    .container {
+        top: 50%;
+        font-weight: 600;
+    }
+    .container h1 {
+        font-size:65px; 
+    }
+    
+    .subtext {
+        margin: 15px;
+        font-size: 25px;
+    }
+    .container h1 span {
+        border: 10px solid white;
+        padding: 6px 14px;
+    }
+    
+    .searchPart .searchBar{
+        width: 500px;
+        margin: 50px;
+        font-size: 20px;
+    
+    }
+}
+
+
+/* @media only screen and (max-width: 280px){
+    .container {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .container h1 {
+        letter-spacing: 0.1em;
+        font-size:40px; 
+        margin: 0;
+    }
+    
+    .subtext {
+        margin: 8px;
+        display: block;
+        font-size: 16px;
+        text-shadow: 0 0 10px black;
+    }
+    .container h1 span {
+        border: 5px solid white;
+        padding: 2px 5px;
+        display: inline-block;
+    }
+    
+} */
