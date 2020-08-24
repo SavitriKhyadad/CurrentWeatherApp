@@ -30,24 +30,27 @@ const layout = () => {
         }
     }
 
-    const closeModal = () => {
+    const modalCloseHandler = () => {
         setShowWeather(false);
-    }
-    const  sideDrawerClosedHandler = () => {
-        setShowSideDrawer(false);
-    }
-
-    const sideDrawerToggleHandler = () => {
-        setShowSideDrawer(!setShowSideDrawer)
     }
 
     const showModal = () => {
         setShowWeather(true);
     }
+
+    const  sideDrawerClosedHandler = () => {
+        setShowSideDrawer(false);
+    }
+
+    const sideDrawerToggleHandler = () => {
+        let status = showSideDrawer;
+        setShowSideDrawer(!status)
+    }
+
     return (
         <Auxiliry>
             <Toolbar drawerToggleClicked={sideDrawerToggleHandler}/>
-            <SideDrawer open={!showSideDrawer} closed={sideDrawerClosedHandler}/>
+            <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler}/>
             <div className={classes.HeroImage}>
                 <div className={classes.container}>
                     <h1><span>WEATHER</span></h1>
@@ -66,7 +69,7 @@ const layout = () => {
                 {(typeof weather.main !== "undefined") ? (
                     <div>
                     <div>
-                        <Modal show={showWeather} modalClosed={closeModal}>
+                        <Modal show={showWeather} modalClosed={modalCloseHandler}>
                             <div className={classes.display}>
                                 <div>{weather.name}, {weather.sys.country}</div>
                                 <div>{Math.round(weather.main.temp)}°C</div>
@@ -77,7 +80,7 @@ const layout = () => {
                     </div>
                  ) : (
                     <div>
-                    <Modal show={showWeather} modalClosed={purchaseCancelHandler}>
+                    <Modal show={showWeather} modalClosed={modalCloseHandler}>
                         <div className={classes.display}>
                             <p>SORRY</p>
                             <p>NO SUCH CITY FOUND!</p>
