@@ -54,7 +54,7 @@ const layout = () => {
             <div className={classes.HeroImage}>
                 <div className={classes.container}>
                     <h1><span>WEATHER</span></h1>
-                    <span className={classes.subtext}>We provide current weather forecast</span>
+                    <span className={classes.subtext}>Enter City To know current Weather Report</span>
                         <div className={classes.searchPart}>
                             <input type='text' placeholder='Search...' className={classes.searchBar} 
                             onChange={event => setSearch(event.target.value)}
